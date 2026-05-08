@@ -1,0 +1,174 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #2d3436;
+  --accent-color: #34495e;
+  --border-color: #000000;
+  --input-bg: #ffffff;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: var(--bg-color);
+  font-family: "Roboto Mono", monospace;
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#título {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+#sub {
+  font-size: 13px;
+  color: #636e72;
+  margin-bottom: 40px;
+}
+
+#calculadoraContainer {
+  width: 100%;
+  max-width: 750px;
+  border: 2px solid var(--border-color);
+  border-radius: 0;
+  padding: 35px;
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+#expnum {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.colunaForm {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.colunaForm label {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 0;
+  background-color: var(--input-bg);
+  font-family: inherit;
+  font-size: 15px;
+  resize: none;
+  transition: all 0.1s;
+}
+
+.input:focus {
+  outline: none;
+  background-color: #f1f2f6;
+  transform: translate(2px, 2px);
+  box-shadow: -2px -2px 0 var(--accent-color);
+}
+
+#submit {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.botão {
+  padding: 12px 24px;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background-color: #fff;
+  transition: all 0.1s;
+  position: relative;
+}
+
+#btCalcular {
+  background-color: var(--text-color);
+  color: #fff;
+  border: 2px solid var(--text-color);
+  flex: 1;
+}
+
+#btLimpar {
+  flex: 1;
+  color: var(--text-color);
+}
+
+#btCalcular:hover {
+  background-color: #000;
+}
+
+#btLimpar:hover {
+  background-color: #f1f2f6;
+}
+
+.botão:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+#resultado {
+  margin-top: 20px;
+  border-top: 2px solid var(--border-color);
+  padding-top: 30px;
+}
+
+#cap h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+#dados .texto {
+  font-size: 16px;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  background-color: #f8f9fa;
+}
+
+.erro {
+  color: #d63031;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+@media (min-width: 650px) {
+  #formCalculadora {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+
+  #expnum,
+  #sub,
+  #submit,
+  #msgErro,
+  #resultado,
+  #msgErroX,
+  #msgErroY {
+    grid-column: span 2;
+  }
+}
