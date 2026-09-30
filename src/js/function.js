@@ -124,8 +124,12 @@ function calcular() {
       somaX2Y,
     );
     console.log(a, b, c);
-    ((vA = a), (vB = b), (vC = c));
-    var somaYest,
+
+    var vA = a,
+      vB = b,
+      vC = c;
+
+    var somaYest = 0,
       vetorYest = [],
       vExpl = 0,
       vNExpl = 0,
@@ -181,8 +185,7 @@ function calcular() {
 function limpar() {
   document.getElementById("vX").value = "";
   document.getElementById("vY").value = "";
-  document.getElementById("somaN").innerHTML = "";
-  document.getElementById("tabela").innerHTML = "";
+  document.getElementById("cap").innerHTML = "";
   document.getElementById("dados").innerHTML = "";
   document.getElementById("msgErroX").innerHTML = "";
   document.getElementById("msgErroY").innerHTML = "";
